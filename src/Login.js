@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 // import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { Link } from 'react-router-dom'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { Link, useHistory, NavLink } from 'react-router-dom'
 import './Login.css';
 import { auth } from "./firebase";
 
@@ -11,29 +11,54 @@ import { auth } from "./firebase";
 // const db = firebaseApp.firestore();
 // const auth = getAuth(app);
 function Login() {
+    const navigate = NavLink();
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [auth, setAuth] = useState('');
+    // const [auth, setAuth] = useState('');
 
-    const signIn = e => {
+    const signIn =async (e) => {
         e.preventDefault();
+        try{
+          const user = await signInWithEmailAndPassword(auth, email, password);
+          console.log(user);  
+          if(auth) {
+            navigate('/')};
+          }catch(error){
+            alert(error.message);
+          }
+             
     }
-    const register = e =>{
-        e.preventDefault();
+  
+    // const register = e => {
+    //   e.preventDefault(); } 
+    const register = async (e) => {
+        e.preventDefault();  
+        try{
+          const user = await createUserWithEmailAndPassword(auth, email, password);
+          console.log(user);  
+          if(auth) {
+            history.push('/')};
+          }catch(error){
+          alert(error.message);
+        }
+      }
+    
+        
 
-        createUserWithEmailAndPassword(auth, email, password)
-  .then((auth)=> {
-        console.log(auth);
-    // ...
-  })
-  .catch(error => alert(error.message))
-            // c(auth,email, password)
-            // .then((auth)=> {
-            //     console.log(auth);
-            // })
-            // .catch(error => alert(error.message))
+        // auth
+        //   .createUserWithEmailAndPassword(auth, email, password)
+        //   .then((auth)=> {
+        //         console.log(auth);        
+        //   })
+        //   .catch(error => alert(error.message))
+                  // c(auth,email, password)
+                  // .then((auth)=> {
+                  //     console.log(auth);
+                  // })
+                  // .catch(error => alert(error.message))
             
-    }
+   
   
 
   return (
