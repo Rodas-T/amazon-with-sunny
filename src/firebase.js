@@ -1,7 +1,7 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // import firebase from 'firebase';
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth} from 'firebase/auth';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

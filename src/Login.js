@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 // import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { Link, useHistory, NavLink } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './Login.css';
 import { auth } from "./firebase";
 
@@ -11,19 +11,19 @@ import { auth } from "./firebase";
 // const db = firebaseApp.firestore();
 // const auth = getAuth(app);
 function Login() {
-    const navigate = NavLink();
+    // const navigate = NavLink();
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // const [auth, setAuth] = useState('');
 
-    const signIn =async (e) => {
+    const signIn = async (e) => {
         e.preventDefault();
         try{
-          const user = await signInWithEmailAndPassword(auth, email, password);
+          const user = signInWithEmailAndPassword(auth, email, password);
           console.log(user);  
           if(auth) {
-            navigate('/')};
+            history.push('/')};
           }catch(error){
             alert(error.message);
           }
