@@ -154,3 +154,128 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2022-10-18T12:24:31.407Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
 [debug] [2022-10-18T12:24:31.408Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
 [debug] [2022-10-18T12:24:31.413Z] File C:\Users\hp\OneDrive\Desktop\Amazon clone with Sunny-220831\sunny\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\hp\\OneDrive\\Desktop\\Amazon clone with Sunny-220831\\sunny\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-10-18T12:24:31.962Z] Serving at port 9005
+
+[debug] [2022-10-18T12:24:32.204Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-18T12:24:32.215Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-10-18T12:24:32.257Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2022-10-18T12:24:32.257Z] [worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: FINISHING"}}
+[debug] [2022-10-18T12:24:32.269Z] [worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: exited"}}
+[debug] [2022-10-18T12:24:32.269Z] [worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-78d42874-eb16-4689-b413-81ece5ba43a7]: FINISHED"}}
+[debug] [2022-10-18T12:24:32.417Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-10-18T12:24:36.186Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.24.1",
+    "stripe": "^10.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-10-18T12:24:36.186Z] Building nodejs source
+[debug] [2022-10-18T12:24:36.186Z] Analyzing nodejs backend spec
+[debug] [2022-10-18T12:24:36.188Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-18T12:24:36.611Z] Serving at port 9005
+
+[debug] [2022-10-18T12:24:36.802Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-18T12:24:36.813Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] FirebaseError: Failed to load function.
+    at Timeout._onTimeout (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsRuntimeWorker.js:152:24)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) {"metadata":{"emulator":{"name":"functions"},"message":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to load function.","status":500}}}
+[debug] [2022-10-18T12:25:01.454Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-10-18T12:26:31.292Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-18T12:26:31.293Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-18T12:26:31.293Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=182899 --> us-central1-api
+[debug] [2022-10-18T12:26:31.299Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:26:31.299Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899"}}
+[debug] [2022-10-18T12:26:31.300Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2022-10-18T12:26:31.311Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-10-18T12:26:31.311Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-10-18T12:26:31.313Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-10-18T12:26:31.313Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-10-18T12:26:31.313Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=182899 --> us-central1-api
+[debug] [2022-10-18T12:26:31.318Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:26:31.319Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899"}}
+[debug] [2022-10-18T12:26:31.320Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-10-18T12:26:31.320Z] [worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: BUSY"}}
+[debug] [2022-10-18T12:26:31.326Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-18T12:26:31.332Z] [worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: exited"}}
+[debug] [2022-10-18T12:26:31.332Z] [worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-27c7d268-f205-49a0-92f2-bf1f8af40994]: FINISHED"}}
+[debug] FirebaseError: Failed to load function.
+    at Timeout._onTimeout (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsRuntimeWorker.js:152:24)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) {"metadata":{"emulator":{"name":"functions"},"message":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to load function.","status":500}}}
+[debug] [2022-10-18T12:27:01.407Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-10-18T12:33:09.828Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-18T12:33:09.829Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-18T12:33:09.829Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=0 --> us-central1-api
+[debug] [2022-10-18T12:33:09.834Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:33:09.836Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=0, mapping to path=/payments/create?total=0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=0, mapping to path=/payments/create?total=0"}}
+[debug] [2022-10-18T12:33:09.836Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2022-10-18T12:33:09.846Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-10-18T12:33:09.846Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-10-18T12:33:09.849Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-10-18T12:33:09.850Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-10-18T12:33:09.850Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=0 --> us-central1-api
+[debug] [2022-10-18T12:33:09.854Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:33:09.854Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=0, mapping to path=/payments/create?total=0 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=0, mapping to path=/payments/create?total=0"}}
+[debug] [2022-10-18T12:33:09.855Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-10-18T12:33:09.855Z] [worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: BUSY"}}
+[debug] [2022-10-18T12:33:09.857Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-18T12:33:09.927Z] [worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: exited"}}
+[debug] [2022-10-18T12:33:09.928Z] [worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-377a7998-ba43-45e3-9ada-641f3c68f1cd]: FINISHED"}}
+[debug] [2022-10-18T12:33:23.851Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-10-18T12:33:23.851Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-10-18T12:33:23.851Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=182899 --> us-central1-api
+[debug] [2022-10-18T12:33:23.856Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:33:23.856Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899"}}
+[debug] [2022-10-18T12:33:23.857Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2022-10-18T12:33:23.869Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-10-18T12:33:23.869Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-10-18T12:33:23.872Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-10-18T12:33:23.873Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-10-18T12:33:23.873Z] Accepted request POST /challenge-with-sunny/us-central1/api/payments/create?total=182899 --> us-central1-api
+[debug] [2022-10-18T12:33:23.879Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-18T12:33:23.880Z] [functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/challenge-with-sunny/us-central1/api/payments/create?total=182899, mapping to path=/payments/create?total=182899"}}
+[debug] [2022-10-18T12:33:23.880Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-10-18T12:33:23.880Z] [worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: BUSY"}}
+[debug] [2022-10-18T12:33:23.883Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-10-18T12:33:23.918Z] [worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: exited"}}
+[debug] [2022-10-18T12:33:23.918Z] [worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-360fb668-754d-4019-811e-4ce88eb7585e]: FINISHED"}}
+[debug] FirebaseError: Failed to load function.
+    at Timeout._onTimeout (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsRuntimeWorker.js:152:24)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) {"metadata":{"emulator":{"name":"functions"},"message":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to load function.","status":500}}}
+[debug] [2022-10-18T12:33:39.876Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] FirebaseError: Failed to load function.
+    at Timeout._onTimeout (C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsRuntimeWorker.js:152:24)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) {"metadata":{"emulator":{"name":"functions"},"message":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to load function.","status":500}}}
+[debug] [2022-10-18T12:33:53.966Z] [work-queue] {"queueLength":0,"workRunningCount":0}
